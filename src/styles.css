@@ -17,14 +17,14 @@
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Press Start 2P", "VT323", "Courier New", monospace;
   background: var(--paper);
   color: var(--ink);
   overflow-x: hidden;
+  letter-spacing: .01em;
 }
-.pixel-text, .section-label, .pill, .btn, .window-bar, .price, .ribbon {
+.pixel-text, .section-label, .pill, .btn, .window-bar, .price, .ribbon, h1, h2, h3, p, a, span, li, b, strong {
   font-family: "Press Start 2P", "VT323", "Courier New", monospace;
-  letter-spacing: .02em;
 }
 .pixel-icon, .icon-box, .brand-mark {
   image-rendering: pixelated;
@@ -87,11 +87,13 @@ h2 { font-size: clamp(32px, 4vw, 56px); line-height: 1; letter-spacing: -.05em; 
 .feature-card h3, .step-card h3, .price-card h3, .faq-card h3 { margin: 0 0 10px; font-size: 22px; letter-spacing:-.02em; }
 .feature-card p, .step-card p, .faq-card p, .price-card p { color:#4b4b4b; font-weight:650; line-height:1.55; margin:0; }
 
-.dark-section { background: var(--ink); color: var(--light-text); border-top:4px solid var(--ink); border-bottom:4px solid var(--ink); }
-.dark-section h2, .dark-section h3, .dark-section p { color: var(--light-text); }
+.dark-section { background: var(--ink); color: #ffffff; border-top:4px solid var(--ink); border-bottom:4px solid var(--ink); }
+.dark-section h2, .dark-section h3, .dark-section p, .dark-section strong, .dark-section span { color: #ffffff; }
 .dark-section .section-label { color:var(--ink); background: var(--yellow); }
-.invert p { color:#f1eac7; }
+.invert p { color:#ffffff; }
 .steps-grid { grid-template-columns: repeat(4, 1fr); }
+.dark-section .step-card { background: #2a2a2a; color: #ffffff; border-color: #ffffff; box-shadow: 6px 6px 0 #ffffff; }
+.dark-section .step-card h3, .dark-section .step-card p, .dark-section .step-card strong { color: #ffffff; }
 .step-card { background: var(--paper); color: var(--ink); }
 .step-card h3, .step-card p { color: var(--ink); }
 .step-card strong { display:block; font-size:42px; letter-spacing:-.08em; margin-bottom:20px; }
@@ -114,16 +116,16 @@ li { display:flex; align-items:flex-start; gap:9px; font-weight:750; line-height
 .faq-grid { grid-template-columns: repeat(2, 1fr); }
 .cta { margin-bottom: 70px; background: var(--yellow); border:4px solid var(--ink); box-shadow:12px 12px 0 var(--ink); padding:42px; display:flex; justify-content:space-between; align-items:center; gap:30px; }
 .cta p { max-width:720px; font-size:18px; font-weight:700; line-height:1.55; }
-.footer { border-top:4px solid var(--ink); background:var(--dark-card); color:var(--light-text); padding:34px 0 22px; }
+.footer { border-top:4px solid var(--ink); background:var(--dark-card); color:#ffffff; padding:34px 0 22px; }
 .footer-inner { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:start; }
 .footer-brand { display:flex; gap:16px; align-items:flex-start; }
 .footer-brand .brand-mark { flex:0 0 auto; background: var(--yellow); color: var(--ink); }
 .footer-brand b { display:block; margin-bottom:8px; font-size:13px; line-height:1.5; }
-.footer-brand p { margin:0; color:#f1eac7; line-height:1.6; font-weight:650; max-width:560px; }
+.footer-brand p { margin:0; color:#ffffff; line-height:1.6; font-weight:650; max-width:560px; }
 .footer-links { display:grid; gap:10px; justify-items:start; }
-.footer-links a, .footer-links span { display:inline-flex; align-items:center; gap:9px; color:var(--light-text); font-weight:800; line-height:1.4; }
+.footer-links a, .footer-links span { display:inline-flex; align-items:center; gap:9px; color:#ffffff; font-weight:800; line-height:1.4; }
 .footer-links a:hover { color:var(--yellow); text-decoration:underline; text-decoration-thickness:2px; }
-.footer-bottom { margin-top:26px; padding-top:18px; border-top:1px solid rgba(255,248,219,.24); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:#d8d0ad; font-size:13px; font-weight:650; }
+.footer-bottom { margin-top:26px; padding-top:18px; border-top:1px solid rgba(255,255,255,.28); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:#ffffff; font-size:13px; font-weight:650; }
 
 @media (max-width: 1120px) {
   .nav-links { display:none; }
