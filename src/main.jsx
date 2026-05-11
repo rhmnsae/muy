@@ -1,6 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowRight, BadgeCheck, Bot, Clock3, MessageSquareText, ShieldCheck, Sparkles, Target, Zap, CheckCircle2, AlertTriangle, Workflow, Headphones, BarChart3 } from 'lucide-react'
+import { ArrowRight, BadgeCheck, Bot, Clock3, MessageSquareText, ShieldCheck, Sparkles, Target, Zap, CheckCircle2, AlertTriangle, Workflow, Headphones, BarChart3, Globe2, Mail, Gamepad2 } from 'lucide-react'
 import './styles.css'
 
 const waNumber = '628977279290'
@@ -83,8 +83,8 @@ function App() {
     <main>
       <header className="nav-wrap">
         <nav className="nav container">
-          <a href="#top" className="brand" aria-label="Asisten Chat Pro">
-            <span className="brand-mark"><Bot size={22} /></span>
+          <a href="#top" className="brand pixel-text" aria-label="Asisten Chat Pro">
+            <span className="brand-mark pixel-icon"><Bot size={22} /></span>
             <span>ASISTEN CHAT PRO</span>
           </a>
           <div className="nav-links">
@@ -153,7 +153,7 @@ function App() {
         <div className="feature-grid">
           {features.map(({ icon: Icon, title, desc }) => (
             <article className="feature-card" key={title}>
-              <div className="icon-box"><Icon size={26} /></div>
+              <div className="icon-box pixel-icon"><Icon size={26} /></div>
               <h3>{title}</h3>
               <p>{desc}</p>
             </article>
@@ -239,8 +239,22 @@ function App() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <b>ASISTEN CHAT PRO</b>
-          <span>Jasa pembuatan asisten chat online untuk bisnis.</span>
+          <div className="footer-brand">
+            <div className="brand-mark pixel-icon"><Gamepad2 size={22} /></div>
+            <div>
+              <b className="pixel-text">ASISTEN CHAT PRO</b>
+              <p>Jasa pembuatan asisten chat online untuk bisnis — bagian dari ekosistem MUTATIT.</p>
+            </div>
+          </div>
+          <div className="footer-links" aria-label="Link penting">
+            <a href="https://mutatit.com" target="_blank" rel="noreferrer"><Globe2 size={17} /> mutatit.com</a>
+            <a href={waLink}><MessageSquareText size={17} /> WhatsApp Konsultasi</a>
+            <span><Mail size={17} /> Respons cepat & brand-safe</span>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <span>© {new Date().getFullYear()} Asisten Chat Pro.</span>
+          <span>Powered by MUTATIT — solusi digital untuk bisnis yang ingin lebih rapi.</span>
         </div>
       </footer>
     </main>
